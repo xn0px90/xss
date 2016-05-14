@@ -1,9 +1,4 @@
-#
-# https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
-# based on the RSnake original http://ha.ckers.org/xss.html
-# Retrieved on 2013-11-20
-# Much of this wildly obsolete
-#
+
 
 # XSS Locator 2
 '';!--"<XSS>=&{()}
